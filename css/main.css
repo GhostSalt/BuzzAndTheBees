@@ -1,0 +1,99 @@
+h1, h2 {
+	background: #FFF;
+    box-shadow: 0 0 .3cm rgba(0, 0, 0, .5);
+	border-radius: 0.1em;
+	min-height: 1.5em;
+	font-size: 4em;
+	text-align: center;
+	margin: 0.25em;
+	margin-bottom: 0.5em;
+	background: url("../img/title.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1 {
+    filter: invert(100%);
+}
+h2.meta {
+	position: relative;
+}
+
+h2.meta::before, h2.meta-meta::before {
+	content: 'META';
+	position: absolute;
+	left: .5em;
+	top: 14%;
+    background-color: black;
+    color: white;
+	padding: 0 .5em .125em;
+	font-size: .75em;
+	box-shadow: 0 0 .2cm rgba(0, 0, 0, .5);
+    transform: rotate(-5deg);
+}
+div#main {
+	background: #FFF;
+	max-width: 30cm;
+	min-height: calc(100vh - 0.95cm);
+	margin: 0 auto;
+	padding: .01em 1.4cm .5cm;
+	box-shadow: 0 0 .2cm rgba(0, 0, 0, .8);
+	border-radius: 2vh;
+}
+div.puzzle {
+	border: none;
+    border-top: 2px dashed #0002;
+}
+div.ans-check-div {
+	font-size: 1.5em;
+	text-align: right;
+	margin-top: 1em;
+	width: min-content;
+	white-space: nowrap;
+	margin-left: auto;
+}
+div.ans-check-div p {
+	margin: 0;
+}
+html {
+	background-image: linear-gradient(to bottom, #fef6c444, #fef6c4aa), url("../img/bg.svg");
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+p, ol, ul, table {
+    font-size: 1.5em;
+}
+p.check-response {
+    text-align: center;
+    font-size: 1em;
+}
+.flavour-text {
+	text-align: left;
+	font-style: italic;
+	margin-top: 0;
+	transform : translateY(-0.3em);
+	line-height: 1.5em;
+	font-size: 1.1em;
+}
+input.answer-checker {
+	border-radius: .1cm;
+	border: none;
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+	width: 25em;
+	height: 1.5em;
+	padding-left: .35em;
+}
+button {
+	height: 2em;
+	border-radius: 1em;
+	background-color: #FFF;
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+	border: none;
+}
+button:hover {
+	background-color: grey;
+	color: white;
+	cursor: pointer;
+}
+button:active {
+	background-color: black;
+}

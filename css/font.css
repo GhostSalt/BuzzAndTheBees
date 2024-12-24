@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Oswald";
+	src: local("Oswald"), url("../fonts/Oswald-Regular.ttf");
+}
+@font-face {
+	font-family: "Ossem Regular";
+	src: local("Ossem Regular"), url("../fonts/Ossem-Regular.otf")
+}
+@font-face {
+	font-family: "Impact Label Reversed";
+	src: local("Impact Label Reversed"), url("../fonts/Impact Label Reversed.ttf")
+}
+h1, h2 {
+	font-family: "Oswald";
+}
+h2::before {
+    font-family: "Impact Label Reversed";
+}
+html {
+	font-family: "Ossem Regular";
+}
+button {
+	font-family: "Ossem Regular";
+}
