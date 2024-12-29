@@ -28,6 +28,16 @@ for (let puzz of Array.from(document.querySelectorAll('.puzzle')))
 		{
 			msg.innerHTML = "<p p class=\"check-response\" style=\"color: #0A0;\">" + funny[val] + "</p>";
 			inp.value = puzz.dataset.solution;
+			
+			if (puzz.classList.contains('meta'))
+				window.location.href = './.secret/solved.html'
+			else {
+				if (inpVal === sol)
+					if (val != funny.length - 1)
+						val++;
+				else
+					val = 0;
+			}
 		}
 		else if (rel.includes(inpVal))
 		{
@@ -36,13 +46,6 @@ for (let puzz of Array.from(document.querySelectorAll('.puzzle')))
 		}
 		else
 			msg.innerHTML = "<br /><p p class=\"check-response\" style=\"color: #A00;\">Incorrect.</p>";
-		if (inpVal === sol)
-		{
-			if (val != funny.length - 1)
-				val++;
-		}
-		else
-			val = 0;
 		return false;
 	}
 	inp.onkeydown = x => x.keyCode !== 13 ? true : handleSub();
