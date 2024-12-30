@@ -1,115 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Buzz and the Bees</title>
-	<link rel="stylesheet" type="text/css" href="css/font.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<style>
-	
-	div.flag-group {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 2em;
-	}
-	
-	div.flags img {
-		width: 30%;
-		box-shadow: 0 0 2px 2px #0004;
-	}
-	
-	div.cards {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		margin-bottom: 1em;
-	}
-	
-	div.cards img {
-		width: 142px;
-		image-rendering: pixelated;
-		-webkit-filter: drop-shadow(0 0 2px #0004);
-		filter: drop-shadow(0 0 2px #0004);
-	}
-	
-	div.protesters {
-		display: flex;
-		justify-content: center;
-		align-items: flex-end;
-		margin-bottom: .5em;
-		gap: 20px;
-	}
-	
-	@keyframes wiggle {
-		from, to    { transform: skew(0, -5deg) scaleX(0.996); }
-		50%   		{ transform: skew(0, 5deg) scaleX(0.996); }
-	}
-	
-	div.cards img.down {
-		margin-top: 40px;
-	}
-	
-	div.cards img:not(.down) {
-		-webkit-filter: drop-shadow(0 40px 1px #0002);
-		filter: drop-shadow(0 40px 1px #0002);
-		margin-bottom: 40px;
-		animation: wiggle 6s ease-in-out infinite;
-	}
-	
-	div.protesters img {
-		width: 140px;
-		-webkit-filter: drop-shadow(0 0 2px #0004);
-		filter: drop-shadow(0 0 2px #0004);
-	}
-	
-	div.speech-bubble {
-		padding: 0 5em 0 3.5em;
-		background-image: url("./img/speech bubble.svg");
-		background-size: contain;
-		background-repeat: no-repeat;
-		-webkit-filter: drop-shadow(5px 15px 3px #0002);
-		filter: drop-shadow(5px 15px 3px #0002);
-	}
-	
-	div.introduction {
-		border: 2px solid #A44;
-		border-radius: 10px;
-		background: linear-gradient(to bottom, #FDD, #DBB);
-		margin: 1em;
-		padding: 0.5em 1em 0.5em 2.5em;
-		font-size: 18pt;
-	}
-	
-	div.introduction:before {
-		content: url("./img/warning sign.svg");
-		position: absolute;
-		transform: translate(calc(-2.5em - 41px), -41px);
-	}
-	
-	span#gibberish {
-		color: #800;
-		font-family: Consolas;
-	}
-	
-	</style>
-	
-	<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		function setRandomLetters(spanId, length) {
-			const pieces = ["bz", "z", "z"];
-			let randomString = '';
-			
-			for (let i = 0; i < length; i++) {
-				const randomIndex = Math.floor(Math.random() * pieces.length);
-				randomString += pieces[randomIndex];
-			}
-	
-			document.getElementById(spanId).textContent = 'Bz' + randomString;
-		}
-	
-		setRandomLetters('gibberish', 9)
-		setInterval(() => setRandomLetters('gibberish', 9), 750);
-	});
-	</script>
+    <title>The Buzz and the Bees</title>
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+    
+    div.flag-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+    
+    div.flags img {
+        width: 30%;
+        box-shadow: 0 0 2px 2px #0004;
+    }
+    
+    div.cards {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 1em;
+    }
+    
+    div.cards img {
+        width: 142px;
+        image-rendering: pixelated;
+        -webkit-filter: drop-shadow(0 0 2px #0004);
+        filter: drop-shadow(0 0 2px #0004);
+    }
+    
+    div.protesters {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: .5em;
+        gap: 20px;
+    }
+    
+    @keyframes wiggle {
+        from, to    { transform: skew(0, -5deg) scaleX(0.996); }
+        50%         { transform: skew(0, 5deg) scaleX(0.996); }
+    }
+    
+    div.cards img.down {
+        margin-top: 40px;
+    }
+    
+    div.cards img:not(.down) {
+        -webkit-filter: drop-shadow(0 40px 1px #0002);
+        filter: drop-shadow(0 40px 1px #0002);
+        margin-bottom: 40px;
+        animation: wiggle 6s ease-in-out infinite;
+    }
+    
+    div.protesters img {
+        width: 140px;
+        -webkit-filter: drop-shadow(0 0 2px #0004);
+        filter: drop-shadow(0 0 2px #0004);
+    }
+    
+    div.speech-bubble {
+        padding: 0 5em 0 3.5em;
+        background-image: url("./img/speech bubble.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-filter: drop-shadow(5px 15px 3px #0002);
+        filter: drop-shadow(5px 15px 3px #0002);
+    }
+    
+    div.introduction {
+        border: 2px solid #A44;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, #FDD, #DBB);
+        margin: 1em;
+        padding: 0.5em 1em 0.5em 2.5em;
+        font-size: 18pt;
+    }
+    
+    div.introduction:before {
+        content: url("./img/warning sign.svg");
+        position: absolute;
+        transform: translate(calc(-2.5em - 41px), -41px);
+    }
+    
+    span#gibberish {
+        color: #800;
+        font-family: Consolas;
+    }
+    
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        function setRandomLetters(spanId, length) {
+            const pieces = ["bz", "z", "z"];
+            let randomString = '';
+            
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * pieces.length);
+                randomString += pieces[randomIndex];
+            }
+    
+            document.getElementById(spanId).textContent = 'Bz' + randomString;
+        }
+    
+        setRandomLetters('gibberish', 9)
+        setInterval(() => setRandomLetters('gibberish', 9), 750);
+    });
+    </script>
 </head>
 <body>
 <div id="main">
