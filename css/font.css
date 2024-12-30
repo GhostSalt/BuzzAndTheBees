@@ -1,24 +1,22 @@
 @font-face {
-	font-family: "Oswald";
-	src: local("Oswald"), url("../fonts/Oswald-Regular.ttf");
+	font-family: "Kingsbridge Cd Rg";
+	src: local("Kingsbridge Cd Rg"), url("../fonts/Kingsbridge Cd Rg.otf");
 }
 @font-face {
-	font-family: "Ossem Regular";
-	src: local("Ossem Regular"), url("../fonts/Ossem-Regular.otf")
+	font-family: "CMU Sans Serif";
+	src: local("CMU Sans Serif"), url("../fonts/cmunbsr.ttf");
 }
 @font-face {
 	font-family: "Impact Label Reversed";
 	src: local("Impact Label Reversed"), url("../fonts/Impact Label Reversed.ttf")
 }
 h1, h2 {
-	font-family: "Oswald";
+	font-family: "Kingsbridge Cd Rg";
 }
 h2::before {
     font-family: "Impact Label Reversed";
 }
-html {
-	font-family: "Ossem Regular";
-}
-button {
-	font-family: "Ossem Regular";
+html, button {
+	font-family: "CMU Sans Serif";
+	font-weight: 500;
 }

@@ -39,23 +39,95 @@
 		gap: 20px;
 	}
 	
-	div.protesters img {
-		width: 140px;
-		-webkit-filter: drop-shadow(0 0 2px #0004);
-		filter: drop-shadow(0 0 2px #0004);
+	@keyframes wiggle {
+		from, to    { transform: skew(0, -5deg) scaleX(0.996); }
+		50%   		{ transform: skew(0, 5deg) scaleX(0.996); }
 	}
 	
 	div.cards img.down {
 		margin-top: 40px;
 	}
 	
+	div.cards img:not(.down) {
+		-webkit-filter: drop-shadow(0 40px 1px #0002);
+		filter: drop-shadow(0 40px 1px #0002);
+		margin-bottom: 40px;
+		animation: wiggle 6s ease-in-out infinite;
+	}
+	
+	div.protesters img {
+		width: 140px;
+		-webkit-filter: drop-shadow(0 0 2px #0004);
+		filter: drop-shadow(0 0 2px #0004);
+	}
+	
+	div.speech-bubble {
+		padding: 0 5em 0 3.5em;
+		background-image: url("./img/speech bubble.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		-webkit-filter: drop-shadow(5px 15px 3px #0002);
+		filter: drop-shadow(5px 15px 3px #0002);
+	}
+	
+	div.introduction {
+		border: 2px solid #A44;
+		border-radius: 10px;
+		background: linear-gradient(to bottom, #FDD, #DBB);
+		margin: 1em;
+		padding: 0.5em 1em 0.5em 2.5em;
+		font-size: 18pt;
+	}
+	
+	div.introduction:before {
+		content: url("./img/warning sign.svg");
+		position: absolute;
+		transform: translate(calc(-2.5em - 41px), -41px);
+	}
+	
+	span#gibberish {
+		color: #800;
+		font-family: Consolas;
+	}
+	
 	</style>
+	
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		function setRandomLetters(spanId, length) {
+			const pieces = ["bz", "z", "z"];
+			let randomString = '';
+			
+			for (let i = 0; i < length; i++) {
+				const randomIndex = Math.floor(Math.random() * pieces.length);
+				randomString += pieces[randomIndex];
+			}
+	
+			document.getElementById(spanId).textContent = 'Bz' + randomString;
+		}
+	
+		setRandomLetters('gibberish', 9)
+		setInterval(() => setRandomLetters('gibberish', 9), 750);
+	});
+	</script>
 </head>
 <body>
 <div id="main">
 
 <h1>The Buzz and the Bees</h1>
-<p>Blahhhhh</p>
+<div style="display: flex; margin-bottom: 1em;">
+<div class="speech-bubble">
+<p>Hello, Your Highness! I'm Bzzbzbzzzzzbzz, executive party planner. For your coronation anniversary, we're throwing you a party! A surprise party!- oh, wait. Oops.</p>
+<p>Well, now that you know about the party, why don't I show you around? There's plenty going on around the hive!</p>
+</div>
+<img src="./img/bzzbzbzzzzzbzz.svg" style="width: 50%; -webkit-filter: drop-shadow(-10px 15px 3px #0002); filter: drop-shadow(-10px 15px 3px #0002);" />
+</div>
+
+<div class="introduction">
+Quick aside before you get started on your puzzling journey! None of the puzzles in this hunt use this page's source code &mdash; please don't look at it, as the answers are there in plaintext.<br />
+Your Santa,<br />
+- <span id="gibberish"></span>
+</div>
 
 <div class="puzzle" data-solution="USERNAMES" data-relevant="AEEMNRSSU">
 <div class="ans-check-div"></div>
@@ -88,11 +160,11 @@
 <div class="puzzle" data-solution="SINGSONG">
 <div class="ans-check-div"></div>
 <h2>Cartomancy</h2>
-<p class="flavour-text">Time for a break! Someone brought a deck of cards, and taught us a weird card game. I still don't fully get it, but I'm happy just fooling around!</p>
+<p class="flavour-text">These guys are having a break! Bzzbzbzz brought a deck of cards, and taught us a weird card game. I still don't fully get it, but I'm happy just fooling around!</p>
 
 <div class="cards">
-<img src="./img/card a.png" />
-<img src="./img/card a.png" />
+<img src="./img/cartomancy a.png" />
+<img src="./img/cartomancy a.png" />
 </div>
 
 <ul>
@@ -104,12 +176,12 @@
 </ul>
 
 <div class="cards">
-<img src="./img/card b.png" class="down" />
-<img src="./img/card c.png" />
-<img src="./img/card d.png" />
-<img src="./img/card e.png" />
-<img src="./img/card f.png" />
-<img src="./img/card g.png" />
+<img src="./img/cartomancy b.png" class="down" />
+<img src="./img/cartomancy c.png" />
+<img src="./img/cartomancy d.png" />
+<img src="./img/cartomancy e.png" />
+<img src="./img/cartomancy f.png" />
+<img src="./img/cartomancy g.png" />
 </div>
 
 <ul>
@@ -118,16 +190,16 @@
 <li>First R-rated movie to gross $1 billion (5)</li>
 <li>Diplopia, say (6, 6)</li>
 <li>Adds two Outsiders in Blood on the Clocktower (5)</li>
-<li>Tradeable, and might have a picture of a pitcher on it (8, 4)</li>
+<li>Collectable, and might have a picture of a pitcher on it (8, 4)</li>
 </ul>
 
 <div class="cards">
-<img src="./img/card h.png" class="down" />
-<img src="./img/card i.png" />
-<img src="./img/card j.png" />
-<img src="./img/card k.png" />
-<img src="./img/card l.png" />
-<img src="./img/card m.png" />
+<img src="./img/cartomancy h.png" class="down" />
+<img src="./img/cartomancy i.png" />
+<img src="./img/cartomancy j.png" />
+<img src="./img/cartomancy k.png" />
+<img src="./img/cartomancy l.png" />
+<img src="./img/cartomancy m.png" />
 </div>
 
 <ul>
@@ -139,11 +211,11 @@
 </ul>
 
 <div class="cards">
-<img src="./img/card n.png" />
-<img src="./img/card o.png" />
-<img src="./img/card p.png" />
-<img src="./img/card q.png" />
-<img src="./img/card r.png" />
+<img src="./img/cartomancy n.png" />
+<img src="./img/cartomancy o.png" />
+<img src="./img/cartomancy p.png" />
+<img src="./img/cartomancy q.png" />
+<img src="./img/cartomancy r.png" />
 </div>
 
 <ul>
@@ -156,7 +228,7 @@
 <div class="puzzle" data-solution="WITCH" data-relevant="COW,PIG,GHAST,CAT,SHEEP">
 <div class="ans-check-div"></div>
 <h2>The Mob</h2>
-<p class="flavour-text">Groups of troublemakers have formed in the plaza, and you need to get them to scatter &mdash; fast! You've lined them up and interrogated them, and each of them had on them a piece of info leading you to another troublemaker.</p>
+<p class="flavour-text">And this is- oh, no!! Groups of troublemakers formed in the plaza, and you need to get them to buzz off &mdash; fast! I've lined them up and interrogated them, and I know this: each of them has on them a piece of info leading you to another troublemaker.</p>
 
 <div class="protesters">
 <img src="./img/the mob a.png" style="width: 300px;" />
@@ -197,8 +269,8 @@
 <div class="meta puzzle" data-solution="HIVEMIND" data-relevant="WISGNRAM,USNSOCNES,IETGH">
 <div class="ans-check-div"></div>
 <h2 class="meta">Chu-Chu Crossings</h2>
-<p class="flavour-text">Phew! The party is ready. It took a lot of work, but by far the scariest part was when the three parallel trains lost their loose bunting to the wind! Luckily, the tourists on the meandering trains caught them all from the tops of the bridges, but oh man!<br />
-&hellip;But what are these symbols on their backs? Did someone hide a message?</p>
+<p class="flavour-text">By far the scariest part of the setup was when the three parallel trains lost their loose bunting to the wind! Luckily, the tourists on the meandering trains caught them all from the tops of the bridges, but oh man!<br />
+&hellip;But what are these symbols on their backs? Did someone hide a message? Hey, take a look, Your Highness.</p>
 
 <p style="text-align: center;">(The transparent track segments lie below the solid ones.)</p>
 
